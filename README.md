@@ -30,7 +30,7 @@ npm.cmd run build
 npm.cmd start
 ```
 
-`DATABASE_URL` points to the PostgreSQL database. The included local container uses port 5434 and a development-only password. `BETTER_AUTH_URL` must equal the browser's origin; use `localhost:3010`, not an unrelated host/port. `BETTER_AUTH_SECRET` signs authentication cookies. The seed is explicit and idempotent: rerunning it preserves existing data.
+`DATABASE_URL` points to the PostgreSQL database used by application queries. For Neon, use its pooled connection string here. `DATABASE_URL_UNPOOLED` is optional and should hold Neon's direct (non-pooled) connection string for schema migrations; when set, `npm run db:migrate` uses it. If it is unset, migrations fall back to `DATABASE_URL`. The included local container uses port 5434 and a development-only password. Set `BETTER_AUTH_URL` to `http://localhost:3010` locally and your exact HTTPS site origin in production. On Vercel, BayFlow uses `VERCEL_PROJECT_PRODUCTION_URL` for production and `VERCEL_URL` for previews when Vercel system environment variables are enabled; `BETTER_AUTH_URL` is the fallback. `BETTER_AUTH_SECRET` signs authentication cookies. The seed is explicit and idempotent: rerunning it preserves existing data.
 
 ## Demo accounts
 

@@ -1,4 +1,4 @@
-import { auth } from "@/lib/auth";
+import { applicationURL, auth } from "@/lib/auth";
 import { sql } from "@/db";
 import { ZodError } from "zod";
 import { AppError, requireThat } from "@/lib/workflow";
@@ -23,7 +23,8 @@ async function handle(req: Request, { params }: { params: Promise<{ path: string
     const user = session?.user ?? null;
     if (req.method === "POST") {
       requireThat(
-        req.headers.get("origin") === new URL(process.env.BETTER_AUTH_URL!).origin,
+        applicationURL &&
+          req.headers.get("origin") === new URL(applicationURL).origin,
         "Request origin rejected.",
         403,
       );
