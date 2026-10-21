@@ -1,0 +1,41 @@
+{
+  "name": "bayflow-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3010",
+    "build": "next build",
+    "start": "next start --port 3010",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "test": "tsx --test tests-next/*.test.ts"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "latest",
+    "better-auth": "latest",
+    "dotenv": "latest",
+    "drizzle-orm": "latest",
+    "lucide-react": "latest",
+    "next": "^16.4.1",
+    "postgres": "latest",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "drizzle-kit": "latest",
+    "eslint": "^9",
+    "eslint-config-next": "^16.4.1",
+    "tailwindcss": "^4",
+    "tsx": "latest",
+    "typescript": "^5"
+  },
+  "type": "module"
+}
