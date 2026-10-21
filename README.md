@@ -90,6 +90,8 @@ The six acceptance scenarios cover authentication and tenant isolation, the comp
 
 Browser checks cover public local images, booking services/slots/details/review, owner POS navigation and mobile layout/menu behavior. See `docs/VERIFICATION.md` for the current evidence and limits.
 
+See the [submission handoff](docs/SUBMISSION.md) for the repository and live links, architecture and workflow diagrams, and the submission checklist.
+
 ## Workflow
 
 Customers sign in or create a customer account before entering the booking wizard. Passwords belong on the authentication screen. After confirmation, the customer sees a booking receipt in My bookings and the workshop sees the new request in its POS. Each booking shows the next responsible role; an owner viewing a technician's job cannot perform that technician's work or approve an estimate for a customer.
