@@ -9,4 +9,5 @@
 - PostgreSQL container runs locally on port 5434; app runs at http://localhost:3010.
 - The user requested readable source and Dr Jarmima's page pattern. All page views use `main.tsx` composition files with sibling sections/forms. Preserve the existing spacing; ESLint retains the code convention checks.
 
-Not verified: public deployment, a container build of the Next.js image, real-device use, production load or a complete manual browser journey switching through every staff role. The full workflow is covered by HTTP acceptance tests. Optional calling/AI are not implemented. The dependency audit still reports transitive tooling advisories; do not describe the app as security-certified.
+- Public deployment: `https://bayflow-studio.vercel.app/`; production `/api/health`, homepage content, shop slots, owner sign-in, dashboard and sign-out returned success. The complete multi-role lifecycle was not manually replayed on production.
+- Not verified: a container build of the Next.js image, real-device use or production load. The full workflow and role isolation are covered by local PostgreSQL HTTP acceptance tests. Optional calling/AI are not implemented. The dependency audit still reports transitive tooling advisories; do not describe the app as security-certified.

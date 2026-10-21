@@ -102,8 +102,10 @@ All protected mutations enforce roles, shop access and valid workflow states on 
 
 ## Deployment and scope
 
-Use a managed PostgreSQL database and a Node-capable host such as Vercel or a container host. Apply migrations and seed the chosen demo database explicitly before opening the app to judges. Set the deployed `BETTER_AUTH_URL` to its HTTPS origin, provide a strong secret, and replace the development database password. The included Dockerfile builds a standalone Next.js image; Docker Compose currently starts the local database only.
+The public repository is [Eesar1/bayflow-studio](https://github.com/Eesar1/bayflow-studio), and the live application is [bayflow-studio.vercel.app](https://bayflow-studio.vercel.app/). The production Neon database has the application migrations and fictional demo records applied. Health, public workshop content, available slots, owner sign-in and the authenticated dashboard have been checked on the deployed site. The complete workflow and role-isolation scenarios pass in the local PostgreSQL acceptance suite; the full multi-role lifecycle has not been manually replayed on production.
 
-No public repository or live deployment has been created for BayFlow in this migration. Calling, AI Front Desk, payments, email/SMS and PDF invoicing are optional and are not implemented. The supplied brief and concepts remain unchanged under `docs/`.
+For another deployment, use a managed PostgreSQL database and a Node-capable host such as Vercel or a container host. Apply migrations and seed the chosen demo database explicitly before opening the app to judges. Set a strong auth secret and production database credentials. On Vercel, the app derives its public origin from Vercel system environment variables when available. The included Dockerfile builds a standalone Next.js image; Docker Compose currently starts the local database only.
 
-The dependency audit still flags transitive tooling dependencies; review and patch them before public deployment. This is a verified local core, not a claim of production readiness.
+Calling, AI Front Desk, payments, email/SMS and PDF invoicing are optional and are not implemented. The supplied brief and concepts remain unchanged under `docs/`.
+
+The dependency audit still flags transitive tooling dependencies; review and patch them before expanding production use. This project has a live deployment, but that does not represent a production security certification or load-test result.

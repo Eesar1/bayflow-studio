@@ -19,10 +19,10 @@ The active application is Next.js, TypeScript, PostgreSQL, Drizzle and Better Au
 | Concurrency | Transactional capacity checks, stock deductions and QC claims |
 | Demo seed | Three shops, staff for each role, services, inventory and example bookings |
 | Source organization | Thin routes, page main.tsx composition, sibling sections/forms and shared components |
-| Core tests | Five PostgreSQL HTTP acceptance scenarios pass |
+| Core tests | Six PostgreSQL HTTP acceptance scenarios pass |
 | Setup | README, commented .env.example, migrations and seed commands |
-| Public repository | Not published for BayFlow |
-| Live URL | Not deployed; mandatory submission item still outstanding |
+| Public repository | [Eesar1/bayflow-studio](https://github.com/Eesar1/bayflow-studio) |
+| Live URL | [bayflow-studio.vercel.app](https://bayflow-studio.vercel.app/); health, public content, slots and owner dashboard checked |
 | Calling and AI Front Desk | Optional; not implemented |
 | Payments, SMS, email and PDF invoices | Optional; not implemented |
 
